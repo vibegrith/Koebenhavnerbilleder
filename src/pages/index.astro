@@ -6,6 +6,7 @@ import Hero from "../components/Hero.astro";
 import PictureSection from "../components/PictureSection.astro";
 import Chapter from "../components/Chapter.astro";
 import Review from "../components/Review.astro";
+import Gallery from "../components/Gallery.astro";
 ---
 <MainLayout title="Titel">
 	<article>
@@ -34,5 +35,65 @@ import Review from "../components/Review.astro";
 	<Review title="6 af 6 stjerner" content="Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.Volmer Hansen, Lukkertiden.dk "></Review>
 
 	</section>
+
+	<section class="pl-6 pr-6">
+		<h1 class="text-center pb-6 pt-6">Galleri - Billeder fra bogen</h1>
+		<Gallery src="/_6090016.jpeg" alt="zoom krog" ></Gallery>
+		<Gallery src="/_6090022.jpeg" alt="lagerbygning" ></Gallery>
+		<Gallery src="/0008.jpg" alt="sollys" ></Gallery>
+		<Gallery src="/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="bygninger" ></Gallery>
+		<Gallery src="/agfa-genanvendeligt-kamera-35mm-8.jpg" alt="forladt" ></Gallery>
+		<Gallery src="/agfa-genanvendeligt-kamera-35mm-11.jpg" alt="togskilt" ></Gallery>
+		<Gallery src="/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg" alt="rækkehuse" ></Gallery>
+		<Gallery src="/amarminoen-med-et-agfa-le-box-3.jpg" alt="bellasky" ></Gallery>
+		<Gallery src="/agfa-genanvendeligt-kamera-35mm-film-2-7.jpg" alt="rampe" ></Gallery>
+		<Gallery src="/amarminoen-med-et-agfa-le-box-11.jpg" alt="mosehavudsigt" ></Gallery>
+		<Gallery src="/amarminoen-med-et-agfa-le-box-12.jpg" alt="solnedgang " ></Gallery>
+		<Gallery src="/anamorfiske-landskaber-amager-faelled-4.jpg" alt="kirke" ></Gallery>
+	</section>
+
+	<section class="pl-6 pr-6">
+		<h1 class="text-center pb-6 pt-6">Forfatteren</h1>
+		<img src="/public/sten_simons.jpg" alt="forfatter">
+		<p class="pt-6 pb-6">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.” Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
+	<Link  href="#", target="_self", variant="textlink", size="standard"> Køb Københavnerbilleder nu! </Link>
+	</section>
+
+	<section>
+		
+<form>
+  <div>
+    <label for="name">Navn:</label>
+    <input type="text" id="name" name="name" required />
+  </div>
+
+  <div>
+    <label for="address">Adresse:</label>
+    <input type="text" id="address" name="address" required />
+  </div>
+
+  <div>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required />
+  </div>
+
+  <div>
+    <label for="zipcode">Postnummer:</label>
+    <input type="text" id="zipcode" name="zipcode" required />
+  </div>
+
+  <div>
+    <label for="city">By:</label>
+    <input type="text" id="city" name="city" required />
+  </div>
+
+  <div>
+    <label for="phone">Telefon:</label>
+    <input type="tel" id="phone" name="phone" required />
+  </div>
+
+</form>
+	</section>
+
 	
 </MainLayout>

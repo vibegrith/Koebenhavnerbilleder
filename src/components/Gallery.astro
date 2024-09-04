@@ -1,0 +1,8 @@
+---
+// Modtag billedets URL og en alternativ tekst som props
+const { src, alt } = Astro.props;
+---
+
+<figure class="pb-6 pt-6">
+  <img src={src} alt={alt} />
+</figure>
