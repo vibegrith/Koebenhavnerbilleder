@@ -9,8 +9,8 @@ import Review from "../components/Review.astro";
 import Gallery from "../components/Gallery.astro";
 ---
 <MainLayout title="Titel">
-	<article>
-		<Hero></Hero>
+	<article class="">
+		
 	</article>
 	<section>
 <PictureSection></PictureSection>
@@ -59,9 +59,9 @@ import Gallery from "../components/Gallery.astro";
 	<Link  href="#", target="_self", variant="textlink", size="standard"> Køb Københavnerbilleder nu! </Link>
 	</section>
 
-	<section>
+	<section class="pl-6 pr-6">
 		
-<form>
+<form class="max-w-4 p-1">
   <div>
     <label for="name">Navn:</label>
     <input type="text" id="name" name="name" required />
@@ -91,7 +91,7 @@ import Gallery from "../components/Gallery.astro";
     <label for="phone">Telefon:</label>
     <input type="tel" id="phone" name="phone" required />
   </div>
-
+<Button>Fortsæt</Button>
 </form>
 	</section>
 

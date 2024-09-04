@@ -3,15 +3,28 @@ import Button from "./Button.astro"
 ---
 
 
-<article class="">
+<article class="grid md:grid-cols-5">
+
+  <div class=" md:col-start-1 md:col-end-4">
     <img class="h-full pb-6" src="/public/kobenhavnerbilleder-sten-simons.jpg" alt="Hero">
-    <div class="text-center pb-6">
-    <h1 >Københavnerbilleder - en guide til hipster foto</h1>
-    <p>af Sten Simons</p>
-    <Button >Køb Nu</Button>
   </div>
-    <p class="pl-6 pb-6">Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
-   
+  
+    <div class=" md:grid md:grid-rows-3 md:col-start-4 md:col-end-6" >
+      <div  class="md:row-start-2">
+    <h1 >Københavnerbilleder - en guide til hipster foto</h1>
+    <p >af Sten Simons</p>
+    <Button>Køb Nu</Button>
+    
+    </div>
+
+</article>
+
+<section class="md:grid md:grid-cols-4">
+  <div class="md:col-start-2">
+<p class="pl-6 pb-6">Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+   </div>
+
+   <div class="md:col-start-3">
     <ul class="pl-6 text-center">
         <li>Titel: Københavnerbilleder - en guide til hipster foto</li>
         <li>Forfatter: Sten Simons</li>
@@ -20,5 +33,5 @@ import Button from "./Button.astro"
         <li>ISBN: 987-6-987654-32-1</li>
         <li>Pris: 399.- </li>
     </ul>
-    
-</article>
+    </div>
+    </section>

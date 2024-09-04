@@ -1,6 +1,7 @@
 ---
 import Link from '../components/Link.astro'
 import Button from './Button.astro'
+import Hero from './Hero.astro'
 ---
 <div x-data="{ showmenu: false }" class="p-4 fixed w-full bg-slate-200" >
 <div id="navbar" class="flex flex-row justify-between">
@@ -29,4 +30,8 @@ x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside=
 </ul>
 </nav>
 </div>
+
+<article>
+    <Hero></Hero>
+</article>
 
