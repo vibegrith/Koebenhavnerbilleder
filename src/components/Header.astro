@@ -1,32 +1,65 @@
 ---
 import Link from '../components/Link.astro'
+import Button from './Button.astro'
+
 ---
-<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-slate-200" >
+<div x-data="{ showmenu: false }" class="p-4 fixed w-full bg-slate-300 z-20 bg-opacity-70 backdrop-blur-md" >
 <div id="navbar" class="flex flex-row justify-between">
-<div id="logo" class="">
-<a href="#link1">Site logo</a>
+<div id="logo" class="text-red-800 text-3xl">
+<a href="#link1">KBHB</a>
 </div>
 <nav id="desktopmenu" class="hidden lg:block">
 <ul class="flex flex-row gap-4">
-<li class=""><Link href="#" >Link 1</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-<li class=""><Link href="#" >Link 2</Link></li>
-<li class=""><Link href="#" >Link 3</Link></li>
-<li class=""><Link href="#" >Link 4</Link></li>
+<li class=""><Link href="#" >About</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
+<li class=""><Link href="#" >Pictures</Link></li>
+<li class=""><Link href="#" >Reviews</Link></li>
+<li class=""><Link href="#" >Author</Link></li>
 </ul>
 </nav>
 
 
-<button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
+<button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+</svg>
+</button>
 </div>
 <nav id="mobilmenu" class="flex flex-col content-center pt-4" 
 x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
 <ul >
-<li class="text-center py-2 border-y-2"><Link href="#" >Link 1</Link></li>
-<li class="text-center py-2 border-b-2"><Link href="#" >Link 2</Link></li>
-<li class="text-center py-2 border-b-2"><Link href="#" >Link 3</Link></li>
-<li class="text-center py-2 border-b-2"><Link href="#" >Link 4</Link></li>
+<li class="text-center py-2 border-y-2"><Link href="#" >About</Link></li>
+<li class="text-center py-2 border-b-2"><Link href="#" >Pictures</Link></li>
+<li class="text-center py-2 border-b-2"><Link href="#" >Reviews</Link></li>
+<li class="text-center py-2 border-b-2"><Link href="#" >Buy</Link></li>
 </ul>
 </nav>
 </div>
 
+	<article class="grid md:grid-cols-5 md:grid-rows-2 md:pl-6 md:h-screen pt-20">
 
+  <div class=" md:col-start-1 md:col-end-4">
+    <img class=" pb-6 md:pb-0 md:mt-10" src="/public/kobenhavnerbilleder-sten-simons.jpg" alt="Hero">
+  </div>
+  
+    <div class=" md:grid md:grid-rows-3 md:col-start-4 md:col-end-6" >
+      <div  class="md:row-start-3 md:pl-6">
+    <h1 class="text-center text-4xl pb-2 md:pb-2 md:text-7xl md:text-left font-h1 font-semibold tracking-in-expand text-red-800" >Københavnerbilleder</h1>
+    <h2 class="text-center md:text-left text-2xl pb-4 md:pb-10">- en guide til hipster foto</h2>
+    <p class="text-center md:text-left pb-6  md:pb-10 " >af Sten Simons</p>
+    <div class="grid grid-cols-3">
+    <Button>Køb Nu</Button>
+    </div>
+    </div>
+</article>
+
+
+<script>
+import { inView } from "motion";
+
+const elementmedanimation3 = document.querySelector(".elementmedanimation4");
+
+inView(elementmedanimation3, () => {
+
+elementmedanimation3.classList.add("animate__animated", "animate__fadeInTopRight");
+
+}); 
+</script>
