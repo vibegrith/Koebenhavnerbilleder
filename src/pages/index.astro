@@ -2,21 +2,37 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
-import Hero from "../components/Hero.astro";
 import PictureSection from "../components/PictureSection.astro";
 import Chapter from "../components/Chapter.astro";
 import Review from "../components/Review.astro";
 import Gallery from "../components/Gallery.astro";
+
 ---
 <MainLayout title="Titel">
-	<article class="">
-		
-	</article>
-	<section>
+
+    <section class="elementmedanimation1">
+		<section class="md:grid md:grid-cols-4 pt-6 pb-6">
+  <div class="md:col-start-2">
+<p class="pl-6 pb-6 leading-relaxed">Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+   </div>
+
+   <div class="md:col-start-3">
+    <ul class="pl-6 text-center leading-relaxed">
+        <li>Titel: Københavnerbilleder - en guide til hipster foto</li>
+        <li>Forfatter: Sten Simons</li>
+        <li>Antal sider: 344</li>
+        <li>Forlag: Mellem Linjerne</li>
+        <li>ISBN: 987-6-987654-32-1</li>
+        <li>Pris: 399.- </li>
+    </ul>
+    </div>
+	</section>
 <PictureSection></PictureSection>
 	</section>
-	<section>
-		<h1 class="text-center pb-6 pt-6">Kapitlerne</h1>
+
+	<section class="grid">
+		<h1 class="text-center md:text-left pb-6 pt-6 text-2xl md:text-4xl font-sans font-semibold">Kapitlerne</h1>
+		<div class="md: grid md:grid-cols-2 md:gap-4">
 		<Chapter title="Kapitel 1 - Intro til street foto" content="Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos."></Chapter>
 		<Chapter title="Kapitel 2 - Om at skyde street" content="Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet."></Chapter>
 		<Chapter title="Kapitel 3 - Om at finde det rette motiv" content="Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver."></Chapter>
@@ -25,75 +41,149 @@ import Gallery from "../components/Gallery.astro";
 		<Chapter title="Kapitel 6 - Om at skyde sort/hvid" content="Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering. "></Chapter>
 		<Chapter title="Kapitel 7 - Kreative teknikker " content="Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!"></Chapter>
 		<Chapter title="Kapitel 8 - Kom helt tæt på!" content="Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…"></Chapter>
+	</div>
+	<div class=" text-center md:pb-6">
+	<Link variant="primary" size="medium" href="#download">Kapitel til download</Link>
+	</div>
 	</section>
 
 	<section class="">
-	<h1 class="text-center pb-6 pt-6">Pressen siger</h1>
-
-	<Review title="5 af 6 stjerner" content="Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen. Hanne Hovgaard, Berlingeren "></Review>
-	<Review title="4 af 5 stjerner" content="Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?Kim Kloggaard, Fotojournalen.dk"></Review>
-	<Review title="6 af 6 stjerner" content="Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.Volmer Hansen, Lukkertiden.dk "></Review>
-
+	<h1 class=" text-2xl text-center md:text-left pb-6 pt-6 md:text-4xl font-sans font-semibold">Pressen siger</h1>
+    <div class="grid md:grid-cols-3 gap-4">
+	<Review title="5 af 6 stjerner" stjerner="5" forfatter=" Hanne Hovgaard, Berlingeren" anmeldelseid="a1" >
+	Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.
+	</Review>
+    <Review title="4 af 6 stjerner" stjerner="4" forfatter=" Fotojournalen.dk" anmeldelseid="a2" >
+	Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?Kim Kloggaard.
+	</Review>
+	<Review title="6 af 6 stjerner" stjerner="6" forfatter=" Volmer Hansen, Lukkertiden.dk" anmeldelseid="a3" >
+    Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.
+	</Review>
+    </div>
 	</section>
 
-	<section class="pl-6 pr-6">
-		<h1 class="text-center pb-6 pt-6">Galleri - Billeder fra bogen</h1>
-		<Gallery src="/_6090016.jpeg" alt="zoom krog" ></Gallery>
+	<section class=" grid elementmedanimation2">
+		<h1 class="text-2xl text-center md:text-left pb-6 pt-6 md:text-4xl font-sans font-semibold">Galleri - Billeder fra bogen</h1>
+		<div class="columns-2 gap:2 md:columns-4 md:gap-4 ">
+		<Gallery src="/agfa-genanvendeligt-kamera-35mm-8.jpg" alt="forladt" ></Gallery>
 		<Gallery src="/_6090022.jpeg" alt="lagerbygning" ></Gallery>
 		<Gallery src="/0008.jpg" alt="sollys" ></Gallery>
-		<Gallery src="/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="bygninger" ></Gallery>
-		<Gallery src="/agfa-genanvendeligt-kamera-35mm-8.jpg" alt="forladt" ></Gallery>
-		<Gallery src="/agfa-genanvendeligt-kamera-35mm-11.jpg" alt="togskilt" ></Gallery>
 		<Gallery src="/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg" alt="rækkehuse" ></Gallery>
+		<Gallery src="/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="bygninger" ></Gallery>
+		<Gallery src="/_6090016.jpeg" alt="zoom krog" ></Gallery>
+		<Gallery src="/amarminoen-med-et-agfa-le-box-12.jpg" alt="solnedgang " ></Gallery>
+		<Gallery src="/agfa-genanvendeligt-kamera-35mm-11.jpg" alt="togskilt" ></Gallery>
 		<Gallery src="/amarminoen-med-et-agfa-le-box-3.jpg" alt="bellasky" ></Gallery>
 		<Gallery src="/agfa-genanvendeligt-kamera-35mm-film-2-7.jpg" alt="rampe" ></Gallery>
 		<Gallery src="/amarminoen-med-et-agfa-le-box-11.jpg" alt="mosehavudsigt" ></Gallery>
-		<Gallery src="/amarminoen-med-et-agfa-le-box-12.jpg" alt="solnedgang " ></Gallery>
 		<Gallery src="/anamorfiske-landskaber-amager-faelled-4.jpg" alt="kirke" ></Gallery>
+		</div>
 	</section>
 
-	<section class="pl-6 pr-6">
-		<h1 class="text-center pb-6 pt-6">Forfatteren</h1>
-		<img src="/public/sten_simons.jpg" alt="forfatter">
-		<p class="pt-6 pb-6">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.” Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
-	<Link  href="#", target="_self", variant="textlink", size="standard"> Køb Københavnerbilleder nu! </Link>
-	</section>
+	<section class="md:grid md:grid-cols-4 md:gap-10 elementmedanimation3">
+		<div class="md:grid md:col-start-2">
+		<h1 class=" pb-6 pt-6 text-2xl text-center md:pt-10 md:pb-6 md:text-4xl font-sans font-semibold ">Forfatteren</h1>
+		<img src="/public/sten_simons.jpg" alt="forfatter"> </div>
+		<div class="md:pt-6 md:pb-6 col-start-3">
+		<p class="pt-6 md:pt-20 pb-6 leading-relaxed">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.” Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
+	</div>
+</section>
 
-	<section class="pl-6 pr-6">
-		
-<form class="max-w-4 p-1">
-  <div>
-    <label for="name">Navn:</label>
-    <input type="text" id="name" name="name" required />
+	<section class="p-6 md:max-w-lg md:mx-auto md:mt-32 md:p-10 bg-slate-200 rounded-2xl bg-opacity-50">
+	<h1 class="text-2xl text-center pb-4 font-sans md:text-4xl md:pb-6 font-semibold text-red-800">Køb Københavnerbilleder nu!</h1>
+
+<form class="">
+		<div class=" pb-6">
+				<div class="grid">
+				<span>Forsendelse:</span>
+<div class="grid grid-cols-2 pt-4">
+				<div>
+				<input type="radio" id="postdk" name="levering" checked="checked">
+				<label for="post">Post Dk</label></div>
+				<div>
+				<input type="radio" id="afhent" name="levering">
+				<label for="afhent">Afhent</label>	
+				</div>
+			</div>
+				</div>
+			</div>
+
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-4">
+  <div class="grid grid-cols-2 md:grid-cols-none">
+    <label class="col-span-1" for="name">Navn:</label>
+    <input class="col-span-2" type="text" id="name" name="name" required />
   </div>
 
-  <div>
-    <label for="address">Adresse:</label>
-    <input type="text" id="address" name="address" required />
+  <div class="grid grid-cols-2 md:grid-cols-none">
+    <label class="col-span-1" for="address">Adresse:</label>
+    <input class="col-span-2" type="text" id="address" name="address" required />
   </div>
 
-  <div>
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required />
+  <div class="grid grid-cols-2 md:grid-cols-none">
+    <label class="col-span-1" for="email">E-mail:</label>
+    <input  class="col-span-2" type="email" id="email" name="email" required />
   </div>
 
-  <div>
-    <label for="zipcode">Postnummer:</label>
-    <input type="text" id="zipcode" name="zipcode" required />
+  <div  class="grid grid-cols-2 md:grid-cols-none">
+    <label class="col-span-1"  for="zipcode">Postnummer:</label>
+    <input class="col-span-2" type="text" id="zipcode" name="zipcode" required />
   </div>
 
-  <div>
-    <label for="city">By:</label>
-    <input type="text" id="city" name="city" required />
+  <div class="grid grid-cols-2 md:grid-cols-none">
+    <label class="col-span-1" for="city">By:</label>
+    <input class="col-span-2" type="text" id="city" name="city" required />
   </div>
 
-  <div>
-    <label for="phone">Telefon:</label>
-    <input type="tel" id="phone" name="phone" required />
+  <div class="grid grid-cols-2 md:grid-cols-none">
+    <label  class="col-span-1" for="phone">Telefon:</label>
+    <input class="col-span-2" type="tel" id="phone" name="phone" required />
   </div>
-<Button>Fortsæt</Button>
+
+  <div class="">
+				<input type="checkbox" id="nyhedsbrev" name="nyhedsbrev">
+				<label for="nyhedsbrev">Ja tak til nyhedsbreve og tilbud</label>
+			</div>
+
+</div>
+
 </form>
+  <div class="grid grid-cols-3 pt-6 md:grid-cols-none md:flex md:flex-row-reverse">
+<Button>Fortsæt</Button>
+</div>
 	</section>
 
 	
 </MainLayout>
+
+
+
+<script>
+
+import { inView } from "motion";
+
+const elementmedanimation1 = document.querySelector(".elementmedanimation1");
+
+inView(elementmedanimation1, () => {
+
+elementmedanimation1.classList.add("animate__animated", "animate__fadeInDown", "animate__delay-2s");
+
+}); 
+
+ 
+
+const elementmedanimation2 = document.querySelector(".elementmedanimation2");
+
+inView(elementmedanimation2, () => {
+
+elementmedanimation2.classList.add("animate__animated", "animate__backInLeft");
+
+}); 
+
+const elementmedanimation3 = document.querySelector(".elementmedanimation3");
+
+inView(elementmedanimation3, () => {
+
+elementmedanimation3.classList.add("animate__animated", "animate__rotateInDownRight");
+
+}); 
+</script>

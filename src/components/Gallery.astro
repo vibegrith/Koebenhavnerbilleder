@@ -3,6 +3,13 @@
 const { src, alt } = Astro.props;
 ---
 
-<figure class="pb-6 pt-6">
+<figure class="pb-2 pt-2 md:pb-4 md:pt-0 minanimation">
   <img src={src} alt={alt} />
 </figure>
+
+	 <style>
+	.minanimation:hover {
+		animation: headShake;
+		animation-duration: 1s;
+	}
+</style>
